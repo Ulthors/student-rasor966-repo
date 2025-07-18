@@ -1,6 +1,6 @@
 FROM python:3.9-slim-bookworm 
 WORKDIR /app 
-COPY ..
+COPY . .
 RUN apt-get update && apt-get upgrade -y && \ 
     apt-get install -y --no-install-recommends gcc && \ 
     apt-get clean &6 rm -rf /var/lib/apt/lists/s 
