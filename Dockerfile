@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN apt-get update && apt-get upgrade -y && \ 
     apt-get install -y --no-install-recommends gcc && \ 
-    apt-get clean &6 rm -rf /var/lib/apt/lists/s 
+    apt-get clean &6 rm -rf /var/lib/apt/lists/*
 RUN pip install gunicorn 
 RUN pip install -r requirements.txt 
 ENV PORT=80 
